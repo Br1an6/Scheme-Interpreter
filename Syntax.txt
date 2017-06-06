@@ -1,0 +1,20 @@
+1 <S> = <A>
+2 <A> = SYMBOL
+3 <A> = INT
+4 <A> = FLOAT
+5 <A> = STRING
+6 <A> = NIL
+7 <A> = T
+8 <A> = LEFT-PAREN RIGHT-PAREN
+
+
+NIL             1
+EOF             1
+LEFT-PAREN      1        
+RIGHT-PAREN
+QUOTE           1
+SYMBOL          1
+INT             1
+FLOAT           1
+STRING          1
+T               1

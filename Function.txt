@@ -1,0 +1,49 @@
+Function      Input Exp                   	Num of Exps	 Return
+=============================================================================
+cons          S-exp                            2         S-exp ; done
+list          S-exp                            >=1       S-exp ; done
+
+quote         S-exp                            1         S-exp ; done
+
+define        參數1: Symbol、參數2: S-exp      2         不回傳 ; done
+
+car           Eval(S-exp)==List                1         S-exp ; done
+cdr           Eval(S-exp)==List                1         S-exp ; done
+
+pair?         S-exp                            1         #t / nil (Atom) ; done
+null?         S-exp                            1         #t / nil (Atom) ; done
+integer?      S-exp                            1         #t / nil (Atom) ; done
+real?         S-exp                            1         #t / nil (Atom) ; done
+number?       S-exp                            1         #t / nil (Atom) ; done
+string?       S-exp                            1         #t / nil (Atom) ; done
+boolean?      S-exp                            1         #t / nil (Atom) ; done
+symbol?       S-exp                            1         #t / nil (Atom) ; done
+
++             Eval(S-exp)==INT / FLOAT (Atom)  >= 2      INT / FLOAT (Atom) ; done
+-             Eval(S-exp)==INT / FLOAT (Atom)  >= 2      INT / FLOAT (Atom) ; done
+*             Eval(S-exp)==INT / FLOAT (Atom)  >= 2      INT / FLOAT (Atom) ; done
+/             Eval(S-exp)==INT / FLOAT (Atom)  >= 2      INT / FLOAT (Atom) ; done
+
+not           S-exp                            1         #t / nil (Atom) ; done
+and           S-exp                            2         #t / nil (Atom) ; done
+or            S-exp                            2         #t / nil (Atom) ; done
+
+>             Eval(S-exp)==INT / FLOAT (Atom)  >= 2      #t / nil (Atom) ; done
+>=            Eval(S-exp)==INT / FLOAT (Atom)  >= 2      #t / nil (Atom) ; done
+<             Eval(S-exp)==INT / FLOAT (Atom)  >= 2      #t / nil (Atom) ; done
+<=            Eval(S-exp)==INT / FLOAT (Atom)  >= 2      #t / nil (Atom) ; done
+=             Eval(S-exp)==INT / FLOAT (Atom)  >= 2      #t / nil (Atom) ; done
+
+string-append Eval(S-exp)==STRING (Atom)       >= 2      STRING (Atom) ; done
+string>?      Eval(S-exp)==STRING (Atom)       >= 2      #t / nil (Atom) ; done
+
+eqv?          S-exp                            2         #t / nil (Atom)
+equal?        S-exp                            2         #t / nil (Atom) ; done
+
+begin         S-exp                            >= 2      S-exp ; done
+
+if            S-exp                            3         S-exp ; done
+cond          ( S-exp S-exp )                  >= 1      S-exp / 無結果可回傳
+
+exit                                           0         不回傳 ; done
+clean-environment                              0         不回傳 ; done
