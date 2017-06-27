@@ -10,7 +10,6 @@
 # include <algorithm>
 
 using namespace std ;
-static int uTestNum ;
 enum TokenType {
   T_EMPTY,
 
@@ -276,13 +275,13 @@ void PrintResult( NodePtr node ) ;
 void ClearToLineEnd() ;
 void ReadToLineEnd() ;
 Token GetToken() ; // GetToken
-bool IsFloatString( string mSymbol ) ; // §PÂ_¬O§_¬Ofloat
-bool IsDigitString( string mSymbol ) ; // §PÂ_¬O§_¬Oint
+bool IsFloatString( string mSymbol ) ; // åˆ¤æ–·æ˜¯å¦æ˜¯float
+bool IsDigitString( string mSymbol ) ; // åˆ¤æ–·æ˜¯å¦æ˜¯int
 bool gEndOfAll = false ; // end of whole project
 bool gPrint = true ; // token build error so no need to print
-bool gFirstDef = true ; // ¥Î¨Ó§PÂ_¬O§_²Ä¤@­Ódefine,¬°¤F±µroot
+bool gFirstDef = true ; // ç”¨ä¾†åˆ¤æ–·æ˜¯å¦ç¬¬ä¸€å€‹define,ç‚ºäº†æ¥root
 
-char ReadCountPost() ; // ¥h­pºâcin§¹ªºmColumn¸òmLine©ñ¦^class,¦b°µerror case use
+char ReadCountPost() ; // å»è¨ˆç®—cinå®Œçš„mColumnè·ŸmLineæ”¾å›class,åœ¨åšerror case use
 string NumberToString( int num ) ;
 int NumberOfArguments( NodePtr node ) ;
 int MinNumberOfArguments( NodePtr node ) ;
@@ -341,7 +340,7 @@ int main() {
   gDefine.resize( 1 );
 
   char charforenter ;
-  scanf( "%d%c", &uTestNum, &charforenter ) ;
+  // scanf( "%d%c", &uTestNum, &charforenter ) ;
   cout <<  "Welcome to OurScheme!" << endl;
   while ( gEndOfAll != true ) {
     Node* root = NULL ;
@@ -1614,7 +1613,7 @@ Token GetToken()  {
     }
     else if ( ret.mSymbol == "." ) ret.mType = T_DOT;
     else  ret.mType = T_SYMBOL ;
-    // §PÂ_mType
+    // åˆ¤æ–·mType
   } // else
 
   return ret ;
