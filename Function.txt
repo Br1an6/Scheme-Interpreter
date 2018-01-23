@@ -5,7 +5,7 @@ list          S-exp                            >=1       S-exp ; done
 
 quote         S-exp                            1         S-exp ; done
 
-define        把计1: Symbol把计2: S-exp      2         ぃ肚 ; done
+define        Var1: Symbol銆乂ar2: S-exp        2         N/A ; done
 
 car           Eval(S-exp)==List                1         S-exp ; done
 cdr           Eval(S-exp)==List                1         S-exp ; done
@@ -43,7 +43,7 @@ equal?        S-exp                            2         #t / nil (Atom) ; done
 begin         S-exp                            >= 2      S-exp ; done
 
 if            S-exp                            3         S-exp ; done
-cond          ( S-exp S-exp )                  >= 1      S-exp / 礚挡狦肚
+cond          ( S-exp S-exp )                  >= 1      S-exp / N/A
 
-exit                                           0         ぃ肚 ; done
-clean-environment                              0         ぃ肚 ; done
+exit                                           0         N/A ; done
+clean-environment                              0         N/A ; done
